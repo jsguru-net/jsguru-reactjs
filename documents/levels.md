@@ -4,7 +4,7 @@
 
 ### Basic
 
-- [ ] Hello world
+- [x] Hello world
 - [ ] JSX
 - [ ] Rendering
 - [ ] Components and Props
@@ -15,6 +15,18 @@
 - [ ] Lifting State Up
 - [ ] Composition vs Inheritance
 - [ ] Thinking In React
+
+> Exercise: Create Personal's Portal
+
+**Features:**
+
+- Bookmarks List by Category
+- Today's checklist
+- Today's notes
+
+**UI:**
+
+- Bootstrap : https://getbootstrap.com/docs/5.1/getting-started/introduction/
 
 ### Intermediate
 
