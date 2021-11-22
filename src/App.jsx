@@ -1,82 +1,65 @@
 import './App.scss';
+import {
+  Input,
+  FormControl,
+  AppBox,
+  Grid,
+  InputLabel,
+  ButtonPrimary,
+  FormHelperText,
+} from './components';
 
-const AppHeader = () => (
-  <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <a
-        href="/"
-        class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-      >
-        <svg
-          class="bi me-2"
-          width="40"
-          height="32"
-          role="img"
-          aria-label="Bootstrap"
-        >
-          <use xlinkHref="#bootstrap"></use>
-        </svg>
-      </a>
-
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li>
-          <a href="#" class="nav-link px-2 link-secondary">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link px-2 link-dark">
-            Features
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link px-2 link-dark">
-            Pricing
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link px-2 link-dark">
-            FAQs
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link px-2 link-dark">
-            About
-          </a>
-        </li>
-      </ul>
-
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">
-          Login
-        </button>
-        <button type="button" class="btn btn-primary">
-          Sign-up
-        </button>
-      </div>
-    </header>
-  </div>
-);
-
-function App() {
+function BookMarkForm() {
   return (
-    <div className="App">
-      <AppHeader></AppHeader>
-      <main>
-        <div className="container">
-          <h2>My Bookmarks</h2>
-        </div>
-        <div class="b-example-divider"></div>
-        <div className="container">
-          <h2>My Checklist</h2>
-        </div>
-        <div class="b-example-divider"></div>
-        <div className="container">
-          <h2>My Notes</h2>
-        </div>
-      </main>
-    </div>
+    <>
+      <AppBox
+        title={'New Bookmark'}
+        sx={{ maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}
+      >
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <Input
+                id="bookmarkName"
+                aria-describedby="Your bookmark name"
+                placeholder="Name"
+              />
+              <FormHelperText
+                id="bookmarkNameHelperText"
+                style={{ marginLeft: 0 }}
+              >
+                You should use a meaningful name that can memorize the link
+              </FormHelperText>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <Input
+                id="bookmarkURL"
+                aria-describedby="Your bookmark URL"
+                placeholder="URL"
+              />
+              <FormHelperText
+                id="bookmarkURLHelperText"
+                style={{ marginLeft: 0 }}
+              >
+                It should be a URL that you wanna bookmark
+              </FormHelperText>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sx={{ textAlign: 'right' }}>
+            <ButtonPrimary>SAVE</ButtonPrimary>
+          </Grid>
+        </Grid>
+      </AppBox>
+    </>
   );
 }
+
+const App = () => (
+  <>
+    <BookMarkForm />
+  </>
+);
 
 export default App;
