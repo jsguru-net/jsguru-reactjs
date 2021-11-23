@@ -6,6 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
+import JSGuruCenterBox from './JSGuruCenterBox';
 
 const AppBoxStyles = {
   p: 2,
@@ -44,4 +45,6 @@ export {
   ButtonPrimary,
   // Others
   AppBox,
+  // Custom Components
+  JSGuruCenterBox,
 };
